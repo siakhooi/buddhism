@@ -1,0 +1,2 @@
+# buddhism
+buddhism
