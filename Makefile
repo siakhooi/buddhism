@@ -1,6 +1,7 @@
 build: clean
 	mkdir -p output/xin-jing
-	xelatex -output-directory=output/xin-jing src/xin-jing/main.tex
+	cd src/xin-jing && xelatex -interaction=nonstopmode -output-directory=../../output/xin-jing main.tex
+
 pdfinfo:
 	pdfinfo output/xin-jing/main.pdf
 

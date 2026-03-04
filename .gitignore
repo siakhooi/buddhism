@@ -1,1 +1,10 @@
 output
+
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex(busy)
+*.synctex.gz
