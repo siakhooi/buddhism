@@ -1,0 +1,87 @@
+% !TEX program = xelatex
+\documentclass[UTF8,a5paper,oneside]{ctexbook}
+% If you prefer different margins, adjust here:
+\usepackage{geometry}
+\geometry{margin=15mm} % A5 with 15mm margins (tune as you like)
+
+% Page style: page number centered at bottom
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}                          % clear all header/footer
+\fancyfoot[C]{\thepage}             % center footer: page number
+\renewcommand{\headrulewidth}{0pt}  % no header rule
+\renewcommand{\footrulewidth}{0pt}  % no footer rule
+
+% Ensure chapter-opening pages also use the same centered page number
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+\setcounter{secnumdepth}{0}  % no section numbering
+% 拼音大小控制
+\newcommand{\pysize}{\footnotesize}
+
+% 拼音在下
+\newcommand{\py}[2]{%
+  \leavevmode
+  \hbox{%
+    \begin{tabular}[t]{@{}c@{}}
+      #1 \\[-0.8em]
+      \pysize\ifx\relax#2\relax\hspace*{2.25em}\else\texttt{#2}\fi
+    \end{tabular}
+  }%
+  \kern-0.5em
+}
+
+\setCJKmainfont{AR PL KaitiM Big5}
+\newcommand{\website}{https://github.com/siakhooi/buddhism}
+\input{meta.tex}
+
+\begin{document}
+
+\begin{titlepage}
+  \thispagestyle{empty} % hide page number on the cover
+  \centering
+  \vspace*{2cm}
+  {\Huge \titleShort \par}
+  \vspace{1.5cm}
+  {\Large \titleChinese \par}
+  \titleSanskrit
+  \vfill
+  \begin{center}
+    cbeta: \cbeta\\
+    version: \version (\versionDate)
+  \end{center}
+\end{titlepage}
+
+\mainmatter
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\normalfont\huge\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\LARGE\bfseries}}
+\LARGE
+{%
+  \setlength{\parindent}{0pt}%
+  \input{content.tex}%
+}
+\makeatother
+
+\backmatter
+\thispagestyle{empty}
+\vspace*{\fill}
+\noindent\footnotesize
+\setlength{\parindent}{0pt}
+\titleChinese\\
+\titleSanskrit\\
+cbeta: \cbeta\\
+version: \version (\versionDate)\\
+website: \website
+
+\end{document}

@@ -41,9 +41,8 @@ main_template=$(realpath "src/template/main.tex")
 set -e
 # generate pinyin
 scripts/generate_content.py "$configDir" "$sourceDir"
-# update version
-# generate first page
-# generate last page
+# generate meta
+scripts/generate_meta.py "$sourceDir"
 
 # generate PDF
 (
