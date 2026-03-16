@@ -6,4 +6,7 @@ pdfinfo:
 	pdfinfo output/xin-jing/main.pdf
 
 clean:
-	rm -rf output
+	rm -rf output www/books
+
+release:
+	./scripts/create-release.sh
