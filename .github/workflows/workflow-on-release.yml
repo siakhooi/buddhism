@@ -20,6 +20,8 @@ jobs:
           pyenv versions
           ./scripts/build.sh xin-jing
           ./scripts/build_pdf.sh xin-jing
+          ./scripts/build.sh jin-gang-jing
+          ./scripts/build_pdf.sh jin-gang-jing
 
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:

@@ -1,0 +1,12 @@
+id: jin-gang-jing
+meta:
+  title:
+    zh: 金剛般若波羅蜜經
+    sa: Vajracchedikā Prajñāpāramitā Sūtra
+    short: 金剛經
+  cbeta:
+    id: T0235
+  version: v0.1.0
+  versionDate: 2026-03-16
+files:
+  - name: sutra.txt

@@ -9,12 +9,40 @@ def generate_pinyin(text, custom_dict):
     if custom_dict:
         load_phrases_dict(custom_dict)
 
+    # Get pinyin output
     pinyin_text = pinyin(text, style=Style.TONE, heteronym=False)
 
-    output=[]
-    for i, item in enumerate(pinyin_text):
-        char=text[i]
-        pychar="".join(item)
+    # Flatten pinyin_text to a list of strings
+    flat_pinyin = []
+    for item in pinyin_text:
+        # If item is a list of length > 1, flatten it
+        for sub in item:
+            flat_pinyin.append(sub)
+
+    # If the lengths don't match, try to fix by splitting grouped punctuations
+    if len(flat_pinyin) != len(text):
+        new_flat = []
+        i = 0
+        for sub in flat_pinyin:
+            # If this pinyin is a group of punctuations, split it
+            if len(sub) > 1 and all(c in '，。！？：；、“”‘’（）《》〈〉『』「」—…·.?!,:;"' for c in sub):
+                for c in sub:
+                    new_flat.append(c)
+            else:
+                new_flat.append(sub)
+        flat_pinyin = new_flat
+
+    # Now, if still not matching, fallback to char itself for missing
+    if len(flat_pinyin) != len(text):
+        # Pad or truncate to match
+        if len(flat_pinyin) < len(text):
+            flat_pinyin += [''] * (len(text) - len(flat_pinyin))
+        else:
+            flat_pinyin = flat_pinyin[:len(text)]
+
+    output = []
+    for i, char in enumerate(text):
+        pychar = flat_pinyin[i]
         if char == pychar:
             output.append(f"\\py{{{char}}}{{}}")
         else:

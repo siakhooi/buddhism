@@ -4,6 +4,9 @@
 \usepackage{geometry}
 \geometry{margin=15mm} % A5 with 15mm margins (tune as you like)
 
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{3em}{1em}
+
 % Page style: page number centered at bottom
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -58,15 +61,18 @@
 \end{titlepage}
 
 \mainmatter
-\makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0pt}%
-  {-3.5ex \@plus -1ex \@minus -.2ex}%
-  {2.3ex \@plus.2ex}%
-  {\normalfont\huge\bfseries}}
-\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}%
-  {1.5ex \@plus .2ex}%
-  {\normalfont\LARGE\bfseries}}
+% Section and subsection formatting and spacing using titlesec
+\titleformat{\section}
+  {\huge\bfseries} % font size and bold
+  {} % label
+  {0pt} % separation between label and title body
+  {} % before-code
+
+\titleformat{\subsection}
+  {\LARGE\bfseries}
+  {}
+  {0pt}
+  {}
 \LARGE
 {%
   \setlength{\parindent}{0pt}%
