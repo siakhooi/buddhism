@@ -8,3 +8,4 @@ output
 *.fdb_latexmk
 *.synctex(busy)
 *.synctex.gz
+www/books/

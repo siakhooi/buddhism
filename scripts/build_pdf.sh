@@ -33,7 +33,10 @@ if [[ ! -d "$outputDir" ]]; then
 	mkdir -p "$outputDir"
 fi
 outputDir=$(realpath "$outputDir")
-
+wwwDir=$(realpath "www/books")
+if [[ ! -d "$wwwDir" ]]; then
+  mkdir -p "$wwwDir"
+fi
 main_template=$(realpath "src/template/main.tex")
 
 # generate PDF
@@ -43,4 +46,5 @@ main_template=$(realpath "src/template/main.tex")
 		exit 1
 	}
 	xelatex -interaction=nonstopmode -output-directory="$outputDir" "$main_template"
+  cp -v "$outputDir"/"$(basename "${main_template%.tex}.pdf")" "$wwwDir/$id.pdf"
 )
