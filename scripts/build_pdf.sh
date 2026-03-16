@@ -34,10 +34,13 @@ if [[ ! -d "$outputDir" ]]; then
 fi
 outputDir=$(realpath "$outputDir")
 
-configDir=$(realpath src/config)
+main_template=$(realpath "src/template/main.tex")
 
-set -e
-# generate pinyin
-scripts/generate_content.py "$configDir" "$sourceDir"
-# generate meta
-scripts/generate_meta.py "$sourceDir"
+# generate PDF
+(
+	cd "$sourceDir" || {
+		echo "Error: failed to change directory to '$sourceDir'" >&2
+		exit 1
+	}
+	xelatex -interaction=nonstopmode -output-directory="$outputDir" "$main_template"
+)

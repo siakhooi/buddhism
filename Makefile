@@ -1,5 +1,6 @@
 build: clean
 	./scripts/build.sh xin-jing
+	./scripts/build_pdf.sh xin-jing
 
 pdfinfo:
 	pdfinfo output/xin-jing/main.pdf
