@@ -1,4 +1,4 @@
-# buddhism
+# 佛经课颂本
 printable buddhism sutras with Hanyu Pinyin.
 
 | Directory | CBETA | 佛经             |
