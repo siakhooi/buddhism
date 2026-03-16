@@ -107,7 +107,7 @@ def main():
                             out_f.write("\\\\\n")
                         else:
                             out_f.write("\n".join(generate_pinyin(line, custom_dict)))
-                            out_f.write("\n")
+                            out_f.write("\\\\\n")
 
 if __name__ == '__main__':
     main()
