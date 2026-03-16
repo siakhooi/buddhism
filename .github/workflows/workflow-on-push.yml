@@ -13,13 +13,12 @@ jobs:
     container:
       image: siakhooi/devcontainer:latex
       options: --user root
-    env:
-      PYENV_ROOT: /home/maui/.pyenv  # Adjust this to your actual path
-      PATH: /home/maui/.pyenv/shims:/home/maui/.pyenv/bin:${{ env.PATH }}
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
       - name: Initialize pyenv and check version
         run: |
+          export PYENV_ROOT="/home/maui/.pyenv"
+          export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
           eval "$(pyenv init -)"
           eval "$(pyenv virtualenv-init -)"
           pyenv versions
