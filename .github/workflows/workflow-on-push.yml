@@ -22,5 +22,5 @@ jobs:
           eval "$(pyenv init -)"
           eval "$(pyenv virtualenv-init -)"
           pyenv versions
-      - run: ./scripts/build.sh xin-jing
-      - run: ./scripts/build_pdf.sh xin-jing
+          ./scripts/build.sh xin-jing
+          ./scripts/build_pdf.sh xin-jing
