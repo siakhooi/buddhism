@@ -1,6 +1,5 @@
 build: clean
-	mkdir -p output/xin-jing
-	cd src/xin-jing && xelatex -interaction=nonstopmode -output-directory=../../output/xin-jing main.tex
+	./scripts/build.sh xin-jing
 
 pdfinfo:
 	pdfinfo output/xin-jing/main.pdf
