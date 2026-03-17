@@ -1,5 +1,4 @@
 info:
-all: clean build3 build2 build1
 build1:
 	./scripts/build.sh xin-jing 2>&1 | tee build-xin-jing.log
 	./scripts/build_pdf.sh xin-jing 2>&1 | tee build-xin-jing-pdf.log
@@ -10,6 +9,8 @@ build3:
 	./scripts/build.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou.log
 	./scripts/build_pdf.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou-pdf.log
 
+all: clean
+	./scripts/build-all.sh 2>&1 | tee build-all.log
 clean:
 	rm -rf output www/books
 release:
