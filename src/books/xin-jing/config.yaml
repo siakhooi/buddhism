@@ -6,7 +6,7 @@ meta:
     short: 心經
   cbeta:
     id: T0251
-  version: v0.1.0
-  versionDate: 2026-03-16
+  version: v0.2.0
+  versionDate: 2026-03-17
 files:
   - name: sutra.txt
