@@ -8,6 +8,9 @@ build2:
 build3:
 	./scripts/build.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou.log
 	./scripts/build_pdf.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou-pdf.log
+build4:
+	./scripts/build.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing.log
+	./scripts/build_pdf.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing-pdf.log
 
 all: clean
 	./scripts/build-all.sh 2>&1 | tee build-all.log

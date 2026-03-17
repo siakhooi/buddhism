@@ -1,0 +1,15 @@
+id: yao-shi-jing
+meta:
+  title:
+    zh: 藥師琉璃光如來本願功德經
+    sa: Bhaiṣajyaguruvaidūryaprabharāja Sūtra
+    short: 藥師經
+  author: 玄奘
+  subject: 佛教經典
+  keywords: 藥師琉璃光如來本願功德經, 藥師經, 玄奘, 佛教經典
+  cbeta:
+    id: T0450
+  version: v0.1.0
+  versionDate: 2026-03-17
+files:
+  - name: sutra.txt
