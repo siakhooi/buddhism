@@ -29,14 +29,15 @@ def main():
 
     # Prepare meta.tex content
     lines = [
-        r"\author{}",
-        r"\date{}",
-        f"\\newcommand{{\\cbeta}}{{{cbeta.get('id', '')}}}",
-        f"\\newcommand{{\\version}}{{{version}}}",
-        f"\\newcommand{{\\versionDate}}{{{version_date}}}",
-        f"\\newcommand{{\\titleShort}}{{{title.get('short', '')}}}",
-        f"\\newcommand{{\\titleChinese}}{{{title.get('zh', '')}}}",
-        f"\\newcommand{{\\titleSanskrit}}{{{title.get('sa', '')}}}",
+        f"\\newcommand{{\\metaAuthor}}{{{meta.get('author', '')}}}",
+        f"\\newcommand{{\\metaSubject}}{{{meta.get('subject', '')}}}",
+        f"\\newcommand{{\\metaKeywords}}{{{meta.get('keywords', '')}}}",
+        f"\\newcommand{{\\metaCbetaId}}{{{cbeta.get('id', '')}}}",
+        f"\\newcommand{{\\metaVersion}}{{{version}}}",
+        f"\\newcommand{{\\metaVersionDate}}{{{version_date}}}",
+        f"\\newcommand{{\\metaTitleShort}}{{{title.get('short', '')}}}",
+        f"\\newcommand{{\\metaTitleChinese}}{{{title.get('zh', '')}}}",
+        f"\\newcommand{{\\metaTitleSanskrit}}{{{title.get('sa', '')}}}",
     ]
 
     with open(meta_path, 'w', encoding='utf-8') as f:

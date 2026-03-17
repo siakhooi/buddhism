@@ -39,24 +39,32 @@
 }
 
 \setCJKmainfont{AR PL KaitiM Big5}
-\newcommand{\website}{https://siakhooi.github.io/buddhism}
+\newcommand{\metaWebsite}{https://siakhooi.github.io/buddhism}
 \input{meta.tex}
-
+\usepackage[pdfusetitle]{hyperref}
+\author{\metaAuthor}
+\date{\metaVersionDate}
+\hypersetup{
+pdftitle={\metaTitleChinese},
+pdfauthor={\metaAuthor},
+pdfsubject={\metaSubject},
+pdfkeywords={\metaKeywords}
+}
 \begin{document}
 
 \begin{titlepage}
   \thispagestyle{empty} % hide page number on the cover
   \centering
   \vspace*{2cm}
-  {\Huge \titleShort \par}
+  {\Huge \metaTitleShort \par}
   \vspace{1.5cm}
-  {\Large \titleChinese \par}
-  \titleSanskrit
+  {\Large \metaTitleChinese \par}
+  \metaTitleSanskrit
   \vfill
   \begin{center}
-    cbeta: \cbeta\\
-    version: \version (\versionDate)\\
-    \website
+    cbeta: \metaCbetaId\\
+    version: \metaVersion (\metaVersionDate)\\
+    \metaWebsite
   \end{center}
 \end{titlepage}
 
