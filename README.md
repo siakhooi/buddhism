@@ -1,11 +1,6 @@
 # 佛经课颂本
 printable buddhism sutras with Hanyu Pinyin.
 
-| Directory     | CBETA | Name             | version | Status      |
-| ------------- | ----- | ---------------- | ------- | ----------- |
-| xin-jing      | T0251 | 般若波羅蜜多心經 | 0.1.0   | Checking In Progress |
-| jin-gang-jing | T0235 | 金剛般若波羅蜜經 | 0.1.0   | Checking In Progress |
-
 ## Steps to Update
 - update `config.yaml`, `dict.yaml`, `sutra.txt` accordingly
 - run `make all`

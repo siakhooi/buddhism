@@ -1,0 +1,13 @@
+id: shi-xiao-zhou
+meta:
+  title:
+    zh: 十小咒
+  author:
+  subject: 佛教經典
+  keywords: 十小咒, 佛教經典
+  cbeta:
+    id: "n/a"
+  version: v0.1.0
+  versionDate: 2026-03-17
+files:
+  - name: sutra.txt
