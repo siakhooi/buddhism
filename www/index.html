@@ -1,17 +1,104 @@
-<html>
-<head>
-    <title>佛经课颂本</title>
-</head>
-<body>
-    <h1>佛经课颂本</h1>
-    <p>欢迎来到佛经课颂本的主页！这里提供了各种佛经课颂的资源和信息。</p>
-    <ul>
-        <li><a href="books/xin-jing.pdf">心经</a></li> 0.1.0, Checking in Progress
-        <li><a href="books/jin-gang-jing.pdf">金刚经</a></li> 0.1.0, Checking in Progress
-    </ul>
-    <a href="https://github.com/siakhooi/buddhism">GitHub 仓库</a>
-    <a href="https://siakhooi.github.io/buddhism">官方网站</a>
-    <a href="https://cbeta.org">CBETA</a>
-    <a href="https://zh.wikisource.org/wiki/%E4%BD%9B%E5%AD%B8%E5%A4%A7%E8%BE%AD%E5%85%B8">维基文库：佛學大辭典</a>
-</body>
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>佛教经典打印本（含拼音）</title>
+    <style>
+      body {
+        font-family: "Noto Serif SC", "Songti SC", serif;
+        background: #f5f3e7 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center top fixed;
+        background-size: cover;
+        color: #4b3e2e;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.92);
+        max-width: 600px;
+        margin: 3em auto 2em auto;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        padding: 2em 2.5em 2em 2.5em;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 0.5em;
+        letter-spacing: 0.1em;
+      }
+      .subtitle {
+        text-align: center;
+        font-size: 1.1em;
+        color: #7c6f57;
+        margin-bottom: 1.5em;
+      }
+      ul.books {
+        list-style: none;
+        padding: 0;
+        margin: 1.5em 0 2em 0;
+      }
+      ul.books li {
+        margin: 1em 0;
+        font-size: 1.15em;
+      }
+      ul.books a {
+        color: #7c4d1e;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      ul.books a:hover {
+        color: #b07d32;
+      }
+      .section {
+        margin-top: 2em;
+      }
+      .feedback {
+        background: #f9f6f1;
+        border-left: 4px solid #e0c68c;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border-radius: 8px;
+        font-size: 1em;
+      }
+      .sources {
+        margin-top: 1.5em;
+        font-size: 0.98em;
+        color: #7c6f57;
+      }
+      .pinyin {
+        font-size: 0.95em;
+        color: #b07d32;
+        margin-top: 0.2em;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>佛教经典打印本</h1>
+      <div class="subtitle">（含拼音，便于学习与诵读）</div>
+      <ul class="books">
+        <li>
+          <a href="books/xin-jing.pdf">般若波罗蜜多心经</a>
+          <div class="pinyin">bō rě bō luó mì duō xīn jīng</div>
+        </li>
+        <li>
+          <a href="books/jin-gang-jing.pdf">金刚般若波罗蜜经</a>
+          <div class="pinyin">jīn gāng bō rě bō luó mì jīng</div>
+        </li>
+      </ul>
+      <div class="section feedback">
+        <strong>意见与建议：</strong><br>
+        如果您在使用过程中发现任何问题，或有改进建议，欢迎通过 <a href="https://github.com/siakhooi/buddhism" target="_blank">GitHub</a> 提交。<br>
+        <span class="pinyin">rú guǒ nín fā xiàn wèn tí huò yǒu jiàn yì，huān yíng tōng guò GitHub tí jiāo。</span>
+      </div>
+      <div class="section sources">
+        <strong>资料来源：</strong><br>
+        <a href="https://cbeta.org" target="_blank">CBETA</a>、
+        <a href="https://zh.wikisource.org/wiki/%E4%BD%9B%E5%AD%B8%E5%A4%A7%E8%BE%AD%E5%85%B8" target="_blank">维基文库：佛学大辞典</a>
+      </div>
+    </div>
+  </body>
 </html>
