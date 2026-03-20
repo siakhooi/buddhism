@@ -1,22 +1,22 @@
 info:
 build1:
-	./scripts/build.sh xin-jing 2>&1 | tee build-xin-jing.log
-	./scripts/build_pdf.sh xin-jing 2>&1 | tee build-xin-jing-pdf.log
+	./scripts/build.sh xin-jing 2>&1 | tee output/build-xin-jing.log
+	./scripts/build_pdf.sh xin-jing 2>&1 | tee output/build-xin-jing-pdf.log
 build2:
-	./scripts/build.sh jin-gang-jing 2>&1 | tee build-jin-gang-jing.log
-	./scripts/build_pdf.sh jin-gang-jing 2>&1 | tee build-jin-gang-jing-pdf.log
+	./scripts/build.sh jin-gang-jing 2>&1 | tee output/build-jin-gang-jing.log
+	./scripts/build_pdf.sh jin-gang-jing 2>&1 | tee output/build-jin-gang-jing-pdf.log
 build3:
-	./scripts/build.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou.log
-	./scripts/build_pdf.sh shi-xiao-zhou 2>&1 | tee build-shi-xiao-zhou-pdf.log
+	./scripts/build.sh shi-xiao-zhou 2>&1 | tee output/build-shi-xiao-zhou.log
+	./scripts/build_pdf.sh shi-xiao-zhou 2>&1 | tee output/build-shi-xiao-zhou-pdf.log
 build4:
-	./scripts/build.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing.log
-	./scripts/build_pdf.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing-pdf.log
+	./scripts/build.sh yao-shi-jing 2>&1 | tee output/build-yao-shi-jing.log
+	./scripts/build_pdf.sh yao-shi-jing 2>&1 | tee output/build-yao-shi-jing-pdf.log
 build5:
-	./scripts/build.sh leng-qie-jing 2>&1 | tee build-leng-qie-jing.log
-	./scripts/build_pdf.sh leng-qie-jing 2>&1 | tee build-leng-qie-jing-pdf.log
+	./scripts/build.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing.log
+	./scripts/build_pdf.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing-pdf.log
 
 all: clean
-	./scripts/build-all.sh 2>&1 | tee build-all.log
+	./scripts/build-all.sh 2>&1 | tee output/build-all.log
 clean:
 	rm -rf output www/books
 release:
@@ -32,3 +32,5 @@ pdfinfo4:
 pdfinfo5:
 	pdfinfo www/books/leng-qie-jing.pdf
 
+font-list:
+	fc-list
