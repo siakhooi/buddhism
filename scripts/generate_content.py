@@ -25,7 +25,9 @@ def generate_pinyin(text, custom_dict):
         i = 0
         for sub in flat_pinyin:
             # If this pinyin is a group of punctuations, split it
-            if len(sub) > 1 and all(c in '，。！？：；、“”‘’（）《》〈〉『』「」—…·.?!,:;"' for c in sub):
+            if len(sub) > 1 and all(
+                c in '，。！？：；、“”‘’（）《》〈〉『』「」—…·.?!,:;"' for c in sub
+            ):
                 for c in sub:
                     new_flat.append(c)
             else:
@@ -36,9 +38,9 @@ def generate_pinyin(text, custom_dict):
     if len(flat_pinyin) != len(text):
         # Pad or truncate to match
         if len(flat_pinyin) < len(text):
-            flat_pinyin += [''] * (len(text) - len(flat_pinyin))
+            flat_pinyin += [""] * (len(text) - len(flat_pinyin))
         else:
-            flat_pinyin = flat_pinyin[:len(text)]
+            flat_pinyin = flat_pinyin[: len(text)]
 
     output = []
     for i, char in enumerate(text):
@@ -50,10 +52,15 @@ def generate_pinyin(text, custom_dict):
 
     return output
 
+
 def main():
-    parser = argparse.ArgumentParser(description='Generate pinyin from source files.')
-    parser.add_argument('configDirectory', type=str, help='Path to the config directory')
-    parser.add_argument('sourceDirectory', type=str, help='Path to the source directory')
+    parser = argparse.ArgumentParser(description="Generate pinyin from source files.")
+    parser.add_argument(
+        "configDirectory", type=str, help="Path to the config directory"
+    )
+    parser.add_argument(
+        "sourceDirectory", type=str, help="Path to the source directory"
+    )
     args = parser.parse_args()
 
     config_dir = args.configDirectory
@@ -80,53 +87,54 @@ def main():
         print(f"Error: config file '{book_config_path}' not found.")
         return
 
-    target_output_file=f"{source_dir}/content.tex"
+    target_output_file = f"{source_dir}/content.tex"
+    with open(target_output_file, "w", encoding="utf-8") as out_f:
+        for file in book_config["files"]:
+            filename = file["name"]
+            pinyin = file.get("pinyin", True)
+            file_path = os.path.join(source_dir, filename)
 
-    for file in book_config["files"]:
-        filename=file["name"]
-        pinyin = file.get("pinyin", True)
-        file_path = os.path.join(source_dir, filename)
+            if not os.path.exists(file_path):
+                print(f"Warning: source file '{file_path}' not found. Skipping.")
+                continue
 
-        if not os.path.exists(file_path):
-            print(f"Warning: source file '{file_path}' not found. Skipping.")
-            continue
+            print(f"Processing '{file_path}' with pinyin={pinyin}...")
 
-        with open(file_path, encoding="utf-8") as f:
-            text = f.read()
+            with open(file_path, encoding="utf-8") as f:
+                text = f.read()
 
-        with open(target_output_file, "w", encoding="utf-8") as out_f:
-            if pinyin==False:
-                    out_f.write(text)
+            if pinyin == False:
+                out_f.write(text)
             else:
-                on_verse=False
+                on_verse = False
                 for line in text.splitlines():
 
                     if line.strip() == "":
                         out_f.write("\n")
 
                     elif line.startswith("# "):
-                        value=generate_pinyin(line[2:].strip(), custom_dict)
+                        value = generate_pinyin(line[2:].strip(), custom_dict)
                         out_f.write(f"\\section{{{''.join(value)}}}")
                         out_f.write("\n")
 
                     elif line.startswith("## "):
-                        value=generate_pinyin(line[3:].strip(), custom_dict)
+                        value = generate_pinyin(line[3:].strip(), custom_dict)
                         out_f.write(f"\\subsection{{{''.join(value)}}}")
                         out_f.write("\n")
 
                     elif line.startswith("### "):
-                        value=generate_pinyin(line[4:].strip(), custom_dict)
+                        value = generate_pinyin(line[4:].strip(), custom_dict)
                         out_f.write(f"\\subsubsection{{{''.join(value)}}}")
                         out_f.write("\n")
 
-                    elif line=="[[":
+                    elif line == "[[":
                         out_f.write("\\begin{verse}")
                         out_f.write("\n")
-                        on_verse=True
+                        on_verse = True
 
-                    elif line=="]]":
+                    elif line == "]]":
                         out_f.write("\\end{verse}")
-                        on_verse=False
+                        on_verse = False
                         out_f.write("\n")
 
                     else:
@@ -137,5 +145,6 @@ def main():
                             out_f.write("\n".join(generate_pinyin(line, custom_dict)))
                             out_f.write("\\\\\n")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
