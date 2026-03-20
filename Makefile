@@ -11,6 +11,9 @@ build3:
 build4:
 	./scripts/build.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing.log
 	./scripts/build_pdf.sh yao-shi-jing 2>&1 | tee build-yao-shi-jing-pdf.log
+build5:
+	./scripts/build.sh leng-qie-jing 2>&1 | tee build-leng-qie-jing.log
+	./scripts/build_pdf.sh leng-qie-jing 2>&1 | tee build-leng-qie-jing-pdf.log
 
 all: clean
 	./scripts/build-all.sh 2>&1 | tee build-all.log
@@ -24,4 +27,8 @@ pdfinfo2:
 	pdfinfo www/books/jin-gang-jing.pdf
 pdfinfo3:
 	pdfinfo www/books/shi-xiao-zhou.pdf
+pdfinfo4:
+	pdfinfo www/books/yao-shi-jing.pdf
+pdfinfo5:
+	pdfinfo www/books/leng-qie-jing.pdf
 
