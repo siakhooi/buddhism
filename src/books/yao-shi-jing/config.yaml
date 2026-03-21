@@ -5,8 +5,11 @@ meta:
     sa: Bhaiṣajyaguruvaidūryaprabharāja Sūtra
     short: 藥師經
   author: 玄奘
-  subject: 佛教經典
-  keywords: 藥師琉璃光如來本願功德經, 藥師經, 玄奘, 佛教經典
+  pdf:
+    title: 藥師琉璃光如來本願功德經
+    author: 玄奘
+    subject: 佛教經典
+    keywords: 藥師琉璃光如來本願功德經, 藥師經, 玄奘, 佛教經典
   cbeta:
     id: T0450
   version: v0.1.0

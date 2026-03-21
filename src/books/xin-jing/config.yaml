@@ -5,8 +5,11 @@ meta:
     sa: Prajñāpāramitāhṛdaya
     short: 心經
   author: 玄奘
-  subject: 佛教經典
-  keywords: 般若波羅蜜多心經, 心經, 玄奘, 佛教經典
+  pdf:
+    title: 般若波羅蜜多心經
+    author: 玄奘
+    subject: 佛教經典
+    keywords: 般若波羅蜜多心經, 心經, 玄奘, 佛教經典
   cbeta:
     id: T0251
   version: v1.0.0

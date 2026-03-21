@@ -22,7 +22,7 @@ def main():
     meta = config.get('meta', {})
     title = meta.get('title', {})
     cbeta = meta.get('cbeta', {})
-
+    pdf = meta.get('pdf', {})
 
     version = meta.get('version', '')
     version_date = meta.get('versionDate', '')
@@ -30,14 +30,16 @@ def main():
     # Prepare meta.tex content
     lines = [
         f"\\newcommand{{\\metaAuthor}}{{{meta.get('author', '')}}}",
-        f"\\newcommand{{\\metaSubject}}{{{meta.get('subject', '')}}}",
-        f"\\newcommand{{\\metaKeywords}}{{{meta.get('keywords', '')}}}",
         f"\\newcommand{{\\metaCbetaId}}{{{cbeta.get('id', '')}}}",
         f"\\newcommand{{\\metaVersion}}{{{version}}}",
         f"\\newcommand{{\\metaVersionDate}}{{{version_date}}}",
         f"\\newcommand{{\\metaTitleShort}}{{{title.get('short', '')}}}",
         f"\\newcommand{{\\metaTitleChinese}}{{{title.get('zh', '')}}}",
         f"\\newcommand{{\\metaTitleSanskrit}}{{{title.get('sa', '')}}}",
+        f"\\newcommand{{\\metaPdfTitle}}{{{pdf.get('title', '')}}}",
+        f"\\newcommand{{\\metaPdfAuthor}}{{{pdf.get('author', '')}}}",
+        f"\\newcommand{{\\metaPdfSubject}}{{{pdf.get('subject', '')}}}",
+        f"\\newcommand{{\\metaPdfKeywords}}{{{pdf.get('keywords', '')}}}",
     ]
 
     with open(meta_path, 'w', encoding='utf-8') as f:

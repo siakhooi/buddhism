@@ -3,8 +3,11 @@ meta:
   title:
     short: 十小咒
   author:
-  subject: 佛教經典
-  keywords: 十小咒, 佛教經典
+  pdf:
+    title: 十小咒
+    author: "n/a"
+    subject: 佛教經典
+    keywords: 十小咒, 佛教經典
   cbeta:
     id: "n/a"
   version: v0.9.0
