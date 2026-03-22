@@ -12,7 +12,7 @@ meta:
     keywords: 般若波羅蜜多心經, 心經, 玄奘, 佛教經典
   cbeta:
     id: T0251
-  version: v1.0.0
-  versionDate: 2026-03-17
+  version: v1.0.1
+  versionDate: 2026-03-22
 files:
   - name: sutra.txt

@@ -12,8 +12,8 @@ meta:
     keywords: 楞伽阿跋多羅寶經, 楞伽經, Laṅkāvatāra Sūtra, 求那跋陀羅, 佛教經典
   cbeta:
     id: T0670
-  version: v0.1.0
-  versionDate: 2026-03-20
+  version: v0.2.0
+  versionDate: 2026-03-22
 files:
   - name: T0670_001.txt
   - name: T0670_002.txt

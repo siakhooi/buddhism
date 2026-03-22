@@ -34,3 +34,18 @@ pdfinfo5:
 
 font-list:
 	fc-list
+
+last_release_tag=0.6.0
+content-files-changed:
+	git diff --name-only $(last_release_tag) \
+	src/books/jin-gang-jing/content.tex \
+	src/books/xin-jing/content.tex \
+	src/books/shi-xiao-zhou/content.tex \
+	src/books/yao-shi-jing/content.tex \
+	src/books/leng-qie-jing/content.tex \
+	src/books/jin-gang-jing/meta.tex \
+	src/books/xin-jing/meta.tex \
+	src/books/shi-xiao-zhou/meta.tex \
+	src/books/yao-shi-jing/meta.tex \
+	src/books/leng-qie-jing/meta.tex 2>&1 | tee output/content-files-changed.log
+
