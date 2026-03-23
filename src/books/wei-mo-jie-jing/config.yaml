@@ -1,0 +1,20 @@
+id: wei-mo-jie-jing
+meta:
+  title:
+    zh: 維摩詰所說經
+    sa: Vimalakīrti-Nirdeśa-Sūtra
+    short: 維摩詰經
+  author: 鳩摩羅什
+  pdf:
+    title: 維摩詰所說經
+    author: 鳩摩羅什
+    subject: 佛教經典
+    keywords: 維摩詰所說經, 維摩詰經, 鳩摩羅什, 佛教經典
+  cbeta:
+    id: T0475
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: T0475_001.txt
+  - name: T0475_002.txt
+  - name: T0475_003.txt
