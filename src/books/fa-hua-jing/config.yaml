@@ -1,0 +1,24 @@
+id: fa-hua-jing
+meta:
+  title:
+    zh: 妙法蓮華經
+    sa: Saddharma Puṇḍarīka Sūtra
+    short: 法華經
+  author: 鸠摩罗什
+  pdf:
+    title: 妙法蓮華經
+    author: 鸠摩罗什
+    subject: 佛教經典
+    keywords: 妙法蓮華經, 法華經, 鸠摩罗什, 佛教經典
+  cbeta:
+    id: T0262
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: T0262_001.txt
+  - name: T0262_002.txt
+  - name: T0262_003.txt
+  - name: T0262_004.txt
+  - name: T0262_005.txt
+  - name: T0262_006.txt
+  - name: T0262_007.txt
