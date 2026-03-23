@@ -1,0 +1,19 @@
+id: wen-shu-bo-re-jing
+meta:
+  title:
+    zh: 文殊師利所說摩訶般若波羅蜜經
+    sa: Saptaśatikā-prajñāpāramitā
+    short: 文殊般若經
+  author: 曼陀罗仙
+  pdf:
+    title: 文殊師利所說摩訶般若波羅蜜經
+    author: 曼陀罗仙
+    subject: 佛教經典
+    keywords: 文殊師利所說摩訶般若波羅蜜經, 文殊般若經, 曼陀罗仙, 佛教經典
+  cbeta:
+    id: TT0232
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: TT0232_001.txt
+  - name: TT0232_002.txt
