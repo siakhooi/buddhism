@@ -1,0 +1,18 @@
+id: zhuan-fa-lun-jing
+meta:
+  title:
+    zh: 轉法輪經
+    sa: Dharmacakra Pravartana Sūtra
+    short: 轉法輪經
+  author: 岫廬
+  pdf:
+    title: 轉法輪經
+    author: 岫廬
+    subject: 佛教經典
+    keywords: 轉法輪經, 岫廬, 佛教經典
+  cbeta:
+    id: B0011
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: B0011_001.txt
