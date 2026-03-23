@@ -1,0 +1,24 @@
+id: xin-di-guan-jing
+meta:
+  title:
+    zh: 大乘本生心地觀經
+    short: 心地觀經
+  author: 般若
+  pdf:
+    title: 大乘本生心地觀經
+    author: 般若
+    subject: 佛教經典
+    keywords: 大乘本生心地觀經, 心地觀經, 般若, 佛教經典
+  cbeta:
+    id: T0159
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: T0159_001.txt
+  - name: T0159_002.txt
+  - name: T0159_003.txt
+  - name: T0159_004.txt
+  - name: T0159_005.txt
+  - name: T0159_006.txt
+  - name: T0159_007.txt
+  - name: T0159_008.txt
