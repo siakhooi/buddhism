@@ -1,0 +1,21 @@
+id: jin-guang-ming-jing
+meta:
+  title:
+    zh: 金光明最勝王經
+    sa: Suvarṇaprabhāsottama Sūtra
+    short: 金光明經
+  author: 曇無讖
+  pdf:
+    title: 金光明最勝王經
+    author: 曇無讖
+    subject: 佛教經典
+    keywords: 金光明最勝王經, 金光明經, 曇無讖, 佛教經典
+  cbeta:
+    id: T0663
+  version: v0.10.0
+  versionDate: 2026-03-22
+files:
+  - name: T0663_001.txt
+  - name: T0663_002.txt
+  - name: T0663_003.txt
+  - name: T0663_004.txt
