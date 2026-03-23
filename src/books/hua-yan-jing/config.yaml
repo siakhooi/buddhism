@@ -1,0 +1,97 @@
+id: hua-yan-jing
+meta:
+  title:
+    zh: 大方廣佛華嚴經
+    sa: Buddhāvataṃsaka Sūtra
+    short: 華嚴經
+  author: 实叉难陀
+  pdf:
+    title: 大方廣佛華嚴經
+    author: 实叉难陀
+    subject: 佛教經典
+    keywords: 大方廣佛華嚴經, 華嚴經, 实叉难陀, 佛教經典
+  cbeta:
+    id: T0279
+  version: v0.1.0
+  versionDate: 2026-03-23
+files:
+  - name: T0279_001.txt
+  - name: T0279_002.txt
+  - name: T0279_003.txt
+  - name: T0279_004.txt
+  - name: T0279_005.txt
+  - name: T0279_006.txt
+  - name: T0279_007.txt
+  - name: T0279_008.txt
+  - name: T0279_009.txt
+  - name: T0279_010.txt
+  - name: T0279_011.txt
+  - name: T0279_012.txt
+  - name: T0279_013.txt
+  - name: T0279_014.txt
+  - name: T0279_015.txt
+  - name: T0279_016.txt
+  - name: T0279_017.txt
+  - name: T0279_018.txt
+  - name: T0279_019.txt
+  - name: T0279_020.txt
+  - name: T0279_021.txt
+  - name: T0279_022.txt
+  - name: T0279_023.txt
+  - name: T0279_024.txt
+  - name: T0279_025.txt
+  - name: T0279_026.txt
+  - name: T0279_027.txt
+  - name: T0279_028.txt
+  - name: T0279_029.txt
+  - name: T0279_030.txt
+  - name: T0279_031.txt
+  - name: T0279_032.txt
+  - name: T0279_033.txt
+  - name: T0279_034.txt
+  - name: T0279_035.txt
+  - name: T0279_036.txt
+  - name: T0279_037.txt
+  - name: T0279_038.txt
+  - name: T0279_039.txt
+  - name: T0279_040.txt
+  - name: T0279_041.txt
+  - name: T0279_042.txt
+  - name: T0279_043.txt
+  - name: T0279_044.txt
+  - name: T0279_045.txt
+  - name: T0279_046.txt
+  - name: T0279_047.txt
+  - name: T0279_048.txt
+  - name: T0279_049.txt
+  - name: T0279_050.txt
+  - name: T0279_051.txt
+  - name: T0279_052.txt
+  - name: T0279_053.txt
+  - name: T0279_054.txt
+  - name: T0279_055.txt
+  - name: T0279_056.txt
+  - name: T0279_057.txt
+  - name: T0279_058.txt
+  - name: T0279_059.txt
+  - name: T0279_060.txt
+  - name: T0279_061.txt
+  - name: T0279_062.txt
+  - name: T0279_063.txt
+  - name: T0279_064.txt
+  - name: T0279_065.txt
+  - name: T0279_066.txt
+  - name: T0279_067.txt
+  - name: T0279_068.txt
+  - name: T0279_069.txt
+  - name: T0279_070.txt
+  - name: T0279_071.txt
+  - name: T0279_072.txt
+  - name: T0279_073.txt
+  - name: T0279_074.txt
+  - name: T0279_075.txt
+  - name: T0279_076.txt
+  - name: T0279_077.txt
+  - name: T0279_078.txt
+  - name: T0279_079.txt
+  - name: T0279_080.txt
