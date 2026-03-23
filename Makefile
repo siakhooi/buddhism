@@ -14,6 +14,9 @@ build4:
 build5:
 	./scripts/build.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing.log
 	./scripts/build_pdf.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing-pdf.log
+build6:
+	./scripts/build.sh zhuan-fa-lun-jing 2>&1 | tee output/build-zhuan-fa-lun-jing.log
+	./scripts/build_pdf.sh zhuan-fa-lun-jing 2>&1 | tee output/build-zhuan-fa-lun-jing-pdf.log
 
 all: clean
 	./scripts/build-all.sh 2>&1 | tee output/build-all.log

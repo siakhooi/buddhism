@@ -12,7 +12,7 @@ meta:
     keywords: 轉法輪經, 岫廬, 佛教經典
   cbeta:
     id: B0011
-  version: v0.1.0
+  version: v1.0.0
   versionDate: 2026-03-23
 files:
   - name: B0011_001.txt
