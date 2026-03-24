@@ -23,6 +23,7 @@ build7:
 all: clean build1 build2 build3 build4 build5 build6 build7
 clean:
 	rm -rf output www/books
+	mkdir -p output www/books
 release:
 	./scripts/create-release.sh
 
