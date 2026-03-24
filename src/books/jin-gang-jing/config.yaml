@@ -12,7 +12,7 @@ meta:
     keywords: 金剛般若波羅蜜經, 金剛經, 鳩摩羅什, 佛教經典
   cbeta:
     id: T0235
-  version: v0.10.0
-  versionDate: 2026-03-22
+  version: v0.11.0
+  versionDate: 2026-03-24
 files:
   - name: sutra.txt
