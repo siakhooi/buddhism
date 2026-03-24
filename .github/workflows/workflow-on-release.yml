@@ -18,7 +18,7 @@ jobs:
           eval "$(pyenv init -)"
           eval "$(pyenv virtualenv-init -)"
           pyenv versions
-          ./scripts/build-all.sh
+          ./scripts/build-all-pdf.sh
 
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
