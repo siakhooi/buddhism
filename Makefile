@@ -1,26 +1,26 @@
 info:
-build1:
+xj:
 	./scripts/generate-pinyin.sh xin-jing 2>&1 | tee output/build-xin-jing.log
 	./scripts/build_pdf.sh xin-jing 2>&1 | tee output/build-xin-jing-pdf.log
-build2:
+jgj:
 	./scripts/generate-pinyin.sh jin-gang-jing 2>&1 | tee output/build-jin-gang-jing.log
 	./scripts/build_pdf.sh jin-gang-jing 2>&1 | tee output/build-jin-gang-jing-pdf.log
-build3:
+sxz:
 	./scripts/generate-pinyin.sh shi-xiao-zhou 2>&1 | tee output/build-shi-xiao-zhou.log
 	./scripts/build_pdf.sh shi-xiao-zhou 2>&1 | tee output/build-shi-xiao-zhou-pdf.log
-build4:
+ysj:
 	./scripts/generate-pinyin.sh yao-shi-jing 2>&1 | tee output/build-yao-shi-jing.log
 	./scripts/build_pdf.sh yao-shi-jing 2>&1 | tee output/build-yao-shi-jing-pdf.log
-build5:
+lqj:
 	./scripts/generate-pinyin.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing.log
 	./scripts/build_pdf.sh leng-qie-jing 2>&1 | tee output/build-leng-qie-jing-pdf.log
-build6:
+zflj:
 	./scripts/generate-pinyin.sh zhuan-fa-lun-jing 2>&1 | tee output/build-zhuan-fa-lun-jing.log
 	./scripts/build_pdf.sh zhuan-fa-lun-jing 2>&1 | tee output/build-zhuan-fa-lun-jing-pdf.log
-build7:
+wmjj:
 	./scripts/generate-pinyin.sh wei-mo-jie-jing 2>&1 | tee output/build-wei-mo-jie-jing.log
 	./scripts/build_pdf.sh wei-mo-jie-jing 2>&1 | tee output/build-wei-mo-jie-jing-pdf.log
-all: clean build1 build2 build3 build4 build5 build6 build7
+all: clean xj jgj sxz ysj lqj zflj wmjj
 clean:
 	rm -rf output www/books
 	mkdir -p output www/books
