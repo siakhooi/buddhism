@@ -8,12 +8,11 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "github.copilot",
-        "github.copilot-chat",
         "yzhang.markdown-all-in-one",
         "lfm.vscode-makefile-term",
         "james-yu.latex-workshop",
         "redhat.vscode-yaml",
+        "ms-python.black-formatter",
         "mkhl.shfmt",
         "timonwong.shellcheck",
         "ms-vscode.live-server",
@@ -22,7 +21,6 @@
     }
   },
   "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/maui/.ssh,type=bind,consistency=cached",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ],
   "remoteEnv": {
