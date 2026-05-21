@@ -3,7 +3,7 @@ printable buddhism sutras with Hanyu Pinyin.
 
 ## Steps to Update
 - update `config.yaml`, `dict.yaml`, `sutra.txt` accordingly
-- run `make all`
+- run `just all`
 - check changes in files `content.tex`, `meta.tex`
 - `git add` files
 - `git commit`
