@@ -1,20 +1,30 @@
-info:
+default:
+  @just --list
 build key:
 	./scripts/generate-pinyin.sh {{ key }} 2>&1 | tee output/build-{{ key }}.log
 	./scripts/build_pdf.sh {{ key }} 2>&1 | tee output/build-{{ key }}-pdf.log
 
+# build xin-jing
 xj: (build "xin-jing")
+# build jin-gang-jing
 jgj: (build "jin-gang-jing")
+# build shi-xiao-zhou
 sxz: (build "shi-xiao-zhou")
+# build yao-shi-jing
 ysj: (build "yao-shi-jing")
-lqj: (build "leng-qie-jing")
+# build zhuan-fa-lun-jing
 zflj: (build "zhuan-fa-lun-jing")
+# build wei-mo-jie-jing
 wmjj: (build "wei-mo-jie-jing")
+# build leng-qie-jing
+lqj: (build "leng-qie-jing")
+# build all
 all: clean xj jgj sxz ysj lqj zflj wmjj
 
 clean:
 	rm -rf output www/books
 	mkdir -p output www/books
+# release
 release:
 	./scripts/create-release.sh
 
