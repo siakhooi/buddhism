@@ -10,7 +10,10 @@ ysj: (build "yao-shi-jing")
 lqj: (build "leng-qie-jing")
 zflj: (build "zhuan-fa-lun-jing")
 wmjj: (build "wei-mo-jie-jing")
-all: clean xj jgj sxz ysj lqj zflj wmjj
+# build yi-jiao-jing
+yjj: (build "yi-jiao-jing")
+
+all: clean xj jgj sxz ysj lqj zflj wmjj yjj
 
 clean:
 	rm -rf output www/books
