@@ -8,7 +8,7 @@ names=(
 	zhuan-fa-lun-jing
 	leng-qie-jing
 	wei-mo-jie-jing
-  yi-jiao-jing
+	yi-jiao-jing
 )
 # shellcheck disable=SC2045
 for dir in "${names[@]}"; do
