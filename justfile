@@ -21,7 +21,7 @@ clean:
 release:
 	./scripts/create-release.sh
 
-last_release_tag := "0.7.0"
+last_release_tag := "0.9.0"
 content-files-changed:
 	git diff --name-only {{last_release_tag}} \
 	src/books/jin-gang-jing/content.tex \
@@ -31,13 +31,15 @@ content-files-changed:
 	src/books/leng-qie-jing/content.tex \
 	src/books/zhuan-fa-lun-jing/content.tex \
 	src/books/wei-mo-jie-jing/content.tex \
+	src/books/yi-jiao-jing/content.tex \
 	src/books/jin-gang-jing/meta.tex \
 	src/books/xin-jing/meta.tex \
 	src/books/shi-xiao-zhou/meta.tex \
 	src/books/yao-shi-jing/meta.tex \
 	src/books/leng-qie-jing/meta.tex \
 	src/books/zhuan-fa-lun-jing/meta.tex \
-	src/books/wei-mo-jie-jing/meta.tex 2>&1 | tee output/content-files-changed.log
+	src/books/wei-mo-jie-jing/meta.tex \
+	src/books/yi-jiao-jing/meta.tex 2>&1 | tee output/content-files-changed.log
 
 pdfinfo:
 	pdfinfo www/books/xin-jing.pdf
