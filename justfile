@@ -1,6 +1,7 @@
 default:
   @just --list
 build key:
+	mkdir -p output
 	./scripts/generate-pinyin.sh {{ key }} 2>&1 | tee output/build-{{ key }}.log
 	./scripts/build_pdf.sh {{ key }} 2>&1 | tee output/build-{{ key }}-pdf.log
 
